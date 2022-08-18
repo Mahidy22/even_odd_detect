@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import EvenOdd from './EvenOdd';
+import style from './EvenOdd.module.css';
 
-function App() {
+
+export default function App() {
+
+  const numbers = [10,21,34,29];
+  const [pickedValue,setPickedValue] = useState(null);
+
+
+
+  const displayNumber = numbers.map((num,i)=>{
+    return (
+      <div key={i} className={style.numStyle} onClick={()=>setPickedValue(num)}>{num}</div>
+    )
+  })
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+<div className={style.container}>
+      <EvenOdd pickedValue={pickedValue} />
+      <div>{displayNumber}</div>
     </div>
-  );
+  )
 }
-
-export default App;

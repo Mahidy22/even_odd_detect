@@ -1,0 +1,39 @@
+.numStyle{
+    color:#000;
+    font-weight: bold;
+    display: inline-block;
+    margin:10px;
+    background:crimson;
+    padding:10px;
+    width:100px;
+    height:100px;
+    line-height: 100px;
+    text-align: center;
+    border-radius: 100%;
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+
+.container{
+    width:600px;
+    text-align: center;
+    margin: auto;
+    background: darkgray;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: monospace;
+
+}
+
+
+.header{
+    background: black;
+    padding: 10px;
+    border-radius: 8px;
+    color: antiquewhite;
+    font-size: 30px;
+}
